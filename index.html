@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Academia de preparación para el Oxford Test of English B1 creada por ZaBaDeV.">
+  <title>Curso B1 Oxford | ZaBaDeV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script type="module" src="academy-scene.js"></script>
+</head>
+<body>
+  <div class="intro" id="intro" aria-labelledby="intro-title">
+    <div class="intro-art" aria-hidden="true"><div class="scene-label">FOCUS <span>·</span> PRACTICE <span>·</span> GROW</div><canvas id="academy-scene"></canvas></div>
+    <div class="intro-copy">
+      <a class="wordmark intro-mark" href="#inicio" aria-label="ZaBaDeV, inicio"><span class="mark-icon">Z</span> ZaBaDeV</a>
+      <p class="eyebrow">Tu siguiente nivel empieza aquí</p>
+      <h1 id="intro-title">Curso <span>B1</span><br>Oxford</h1>
+      <p class="intro-subtitle">Entrena con intención. Llega al examen con confianza.</p>
+      <p class="intro-author">Creado por <strong>ZaBaDeV</strong></p>
+      <button class="button button-dark intro-cta" id="enter-course">Entrar a la academia <span aria-hidden="true">↗</span></button>
+    </div>
+    <div class="intro-foot"><span>PREPARACIÓN · PRÁCTICA · PROGRESO</span><span>01 — 04 MÓDULOS</span></div>
+  </div>
+
+  <div class="app-shell" id="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <a class="wordmark" href="#inicio" data-view="inicio"><span class="mark-icon">Z</span><span>ZaBaDeV<span class="brand-sub">ENGLISH ACADEMY</span></span></a>
+      <div class="course-chip"><span class="chip-mark">B1</span><span><strong>Oxford Test</strong><small>Ruta de preparación</small></span><span class="online-dot"></span></div>
+      <p class="nav-label">ACADEMIA</p>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="inicio"><span class="nav-icon">⌂</span>Inicio</button>
+        <button class="nav-item" data-view="ruta"><span class="nav-icon">▤</span>Mi ruta <span class="nav-count">4</span></button>
+        <button class="nav-item" data-view="practicar"><span class="nav-icon">✳</span>Practicar</button>
+        <button class="nav-item" data-view="simulacro"><span class="nav-icon">◷</span>Simulacro</button>
+        <button class="nav-item" data-view="biblioteca"><span class="nav-icon">▧</span>Biblioteca</button>
+        <button class="nav-item" data-view="progreso"><span class="nav-icon">↗</span>Mi progreso</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><span class="note-spark">✦</span><p><strong>Un poco cada día.</strong><br>Un gran paso para el examen.</p></div>
+        <button class="profile-button" id="profile-button"><span class="avatar" id="avatar-initial">Z</span><span class="profile-text"><strong id="profile-name">Estudiante</strong><small>Plan de estudio</small></span><span class="profile-more">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Abrir menú">☰</button>
+        <div class="breadcrumb"><span>Academia</span><span class="crumb-sep">/</span><strong id="current-section">Inicio</strong></div>
+        <div class="top-actions"><span class="today-label" id="today-label"></span><button class="icon-button" id="help-button" aria-label="Ayuda" title="Ayuda">?</button></div>
+      </header>
+      <div class="view-container" id="view-container" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <dialog class="profile-dialog" id="profile-dialog">
+    <form method="dialog" class="dialog-top"><span class="eyebrow">TU ESPACIO</span><button class="icon-button" aria-label="Cerrar">×</button></form>
+    <h2>Tu perfil de estudio</h2>
+    <label for="student-name">¿Cómo te llamamos?</label>
+    <input id="student-name" maxlength="24" placeholder="Tu nombre">
+    <p class="muted">Tu nombre y tus resultados se guardan solo en este dispositivo.</p>
+    <button class="button button-dark" id="save-profile">Guardar perfil</button>
+  </dialog>
+  <dialog class="help-dialog" id="help-dialog">
+    <form method="dialog" class="dialog-top"><span class="eyebrow">CÓMO FUNCIONA</span><button class="icon-button" aria-label="Cerrar">×</button></form>
+    <h2>Tu academia, a tu ritmo</h2>
+    <p>Practica Reading, Listening, Writing y Speaking. Los tests se generan con preguntas variadas; tus resultados y borradores se conservan en este navegador.</p>
+    <p>Listening puede generar voces británicas con Kokoro Natural directamente en tu navegador. La primera vez descarga el modelo (unos 92 MB); después se reutiliza desde la caché. El texto de práctica no se envía a un servicio de voz.</p>
+    <button class="button button-dark" id="open-sources">Ver fuentes del curso</button>
+  </dialog>
+</body>
+</html>
